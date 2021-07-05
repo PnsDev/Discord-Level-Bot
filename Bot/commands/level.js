@@ -2,7 +2,7 @@ const {MessageEmbed, MessageAttachment, GuildMember} = require('discord.js'),
     Canvas = require("canvas"), {numberFormat} = require('../../utils/utils'),
     {getXp, calculateLevel} = require('../../utils/xpInterface')
 
-Canvas.registerFont("./resources/fonts/MyFont-Regular.otf", {
+Canvas.registerFont("./resources/fonts/Poppins-Medium.otf", {
     family: "poppinFont",
 });
 
@@ -47,13 +47,9 @@ module.exports.run = async (client, message, args) => {
         /**
          * Profile Picture
          */
-        try {
-            const avatar = await Canvas.loadImage(args[0].user.displayAvatarURL({format: 'png', size: 256}));
-            ctx.fillRect(26, 21.9, 153, 153);
-            ctx.drawImage(avatar, 26, 21.9, 153, 153)
-        } catch (e) {
-            return e;
-        }
+        const avatar = await Canvas.loadImage(args[0].user.displayAvatarURL({format: 'png', size: 256}));
+        ctx.fillRect(26, 21.9, 153, 153);
+        ctx.drawImage(avatar, 26, 21.9, 153, 153)
         /**
          * Overlay Base
          */
