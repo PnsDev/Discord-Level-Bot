@@ -1,0 +1,17 @@
+{
+  "MongoDB": {
+    "User": "",
+    "Pass": "",
+    "Host": "",
+    "Port": ""
+  },
+  "Bot": {
+    "Token": "",
+    "Prefix": "-",
+    "Colors": {
+      "Main": "c87ee7",
+      "Good": "64e35e",
+      "Bad": "ff4f4f"
+    }
+  }
+}
