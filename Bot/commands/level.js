@@ -1,6 +1,7 @@
 const {MessageEmbed, MessageAttachment, GuildMember} = require('discord.js'),
     Canvas = require("canvas"), {numberFormat} = require('../../utils/utils'),
-    {getXp, calculateLevel} = require('../../utils/xpInterface')
+    {getXp, calculateLevel} = require('../../interfaces/xpInterface'),
+    {updateVcExp} = require('../../interfaces/vcInterface')
 
 Canvas.registerFont("./resources/fonts/Poppins-Medium.otf", {
     family: "poppinFont",
@@ -23,6 +24,7 @@ module.exports.run = async (client, message, args) => {
         args[0] = message.member;
     }
 
+    if (args[0].voice.channelID) await updateVcExp(args[0].id, args[0].guild.id);
     const memberData = calculateLevel(await getXp(args[0].id, args[0].guild.id));
     const newMsg = await message.reply((new MessageAttachment(await makeImage(), `${args[0].user.username}.png`)));
 

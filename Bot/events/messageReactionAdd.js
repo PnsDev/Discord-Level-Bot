@@ -1,9 +1,5 @@
-const {redBright} = require('chalk'), {editXp} = require('../../utils/xpInterface')
+const {redBright} = require('chalk'), {editXp} = require('../../interfaces/xpInterface')
 
-//=======================
-// This handles all the
-// commands.
-//=======================
 module.exports = async (client, messageReaction, user) => {
     if (user.bot) return;
     if (messageReaction.message.guild.id !== null){
@@ -13,5 +9,4 @@ module.exports = async (client, messageReaction, user) => {
             console.log(redBright(`==================\nAuthor: ${user.tag} // ${user.id}\nAction: Adding Reaction Xp\nStack Error:\n${e.stack}\n==================`))
         }
     }
-
 };

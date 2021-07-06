@@ -1,4 +1,4 @@
-const {MessageEmbed} = require('discord.js'), {redBright} = require('chalk'), {editXp} = require('../../utils/xpInterface')
+const {MessageEmbed} = require('discord.js'), {redBright} = require('chalk'), {editXp} = require('../../interfaces/xpInterface')
 
 //=======================
 // This handles all the
