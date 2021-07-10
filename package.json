@@ -1,12 +1,13 @@
 {
-  "name": "hypixel-bot",
-  "version": "1.0.0",
+  "name": "Discord Level Bot",
+  "version": "0.0.2",
   "description": "",
   "main": "App.js",
+  "repository": "https://github.com/PnsDev/Discord-Level-Bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "dre",
+  "author": "PnsDev",
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.8.0",
